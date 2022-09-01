@@ -13,6 +13,8 @@ const ObjectID = mongodb.ObjectID;
     const client = new MongoClient(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
     const match = { _id: ObjectID("61faa6689af48d000c3493c6") };
 
+
+    console.log(process.version);
     console.log('calling mongo')
 
     await client.db(dbName).collection('competitions').aggregate([
