@@ -35,7 +35,7 @@ const ObjectID = mongodb.ObjectID;
                     "region": "eu-central-1",
                     "filename": 'competitions/testing123s',
                     "format": {
-                        "name": "bson.gz"
+                        "name": "bson"
                     }
                 }
             }
