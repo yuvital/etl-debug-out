@@ -10,9 +10,16 @@ const ObjectID = mongodb.ObjectID;
     const mongoUri = 'mongodb://datalake:z42bVzxCOEqGvOlo@datalake-xrmh7.a.query.mongodb.net/rumble_lake?ssl=true&authSource=admin';
     const poolSize = 200;
     const dbName = mongoUri.split('/')[3].split('?')[0];
-    const client = new MongoClient(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
-    const match = { _id: ObjectID("61faa6689af48d000c3493c6") };
-
+    const client = new MongoClient(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });    
+    const from = new Date(new Date().getTime() - 3600000);
+    //const match = { _id: ObjectID("61faa6689af48d000c3493c6") };
+    const match =
+    {
+        [queryBy]: {
+            $gte: new Date(from),
+            $lte: new Date()
+        }
+    };
 
     console.log(process.version);
     console.log('calling mongo')
