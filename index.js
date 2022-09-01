@@ -11,7 +11,7 @@ const ObjectID = mongodb.ObjectID;
     const poolSize = 200;
     const dbName = mongoUri.split('/')[3].split('?')[0];
     const client = new MongoClient(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });    
-    const from = new Date(new Date().getTime() - 3600000);
+    const from = new Date(new Date().getTime() - 86400000);
     //const match = { _id: ObjectID("61faa6689af48d000c3493c6") };
     const match =
     {
