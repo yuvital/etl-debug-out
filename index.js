@@ -35,7 +35,7 @@ const ObjectID = mongodb.ObjectID;
                     "region": "eu-central-1",
                     "filename": 'competitions/testing123s',
                     "format": true ? {
-                        "name": "parquet",
+                        "name": "bson.gz",
                         "maxFileSize": "10GB",
                         "maxRowGroupSize": "100MB"
                     } : {
