@@ -15,7 +15,7 @@ const ObjectID = mongodb.ObjectID;
     //const match = { _id: ObjectID("61faa6689af48d000c3493c6") };
     const match =
     {
-        [queryBy]: {
+        docUpdatedAt: {
             $gte: new Date(from),
             $lte: new Date()
         }
